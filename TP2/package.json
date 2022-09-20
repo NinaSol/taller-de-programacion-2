@@ -1,0 +1,14 @@
+{
+    "name": "filesystem-sincronico-y-asincronico",
+    "version": "1.0.0",
+    "description": "",
+    "main": "ms.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Nina Marotta",
+    "license": "ISC"
+  }
+  
