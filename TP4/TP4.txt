@@ -1,0 +1,19 @@
+﻿1.
+* mongosh
+* use empresa
+* db.createCollection(‘clientes’)
+* db.createCollection(‘productos’)
+* db.clientes.insertMany([{nombre:"Juan",apellido:"Jimenez",edad:20,telefono:1123455432,email:"jjimenez@gmail.com"},{nombre:"Juana",apellido:"Rodriguez",edad:35,telefono:1156789876,email:"jrodriguez@gmail.com"},{nombre:"Mario",apellido:"Lopez",edad:40,telefono:1165452398,email:"mlopez@gmail.com"},{nombre:"Nina",apellido:"Marotta",edad:20,telefono:1198732345,email:"nina@gmail.com"},{nombre:"Josefina",apellido:"Moreno",edad:27,telefono:1123578723,email:"jose@gmail.com"}])
+* db.productos.insertMany([{nombre:"Zapatillas",descripcion:"Zapatilla Nike Air Aules",stock:1,precio:345555},{nombre:"Zapatillas",descripcion:"Zapatillas Vans negras",stock:10,precio:25000},{nombre:"Sandalias",descripicon:"Sandalias grimoldi",stock:3,precio:13000},{nombre:"Borcegos",descripcion:"Borcegos HushPuppies Marrones",stock:2,precio:40000}])
+   2. 
+* show collections
+* db.productos.find(), db.clientes.find()
+* db.clientes.countDocuments() + db.productos.countDocuments()
+* db.clientes.find().sort( { edad: 1 } )
+* db.productos.find().sort( { stock: -1 } )
+* db.productos.find().sort({precio: -1}).limit(1)
+* db.clientes.find().sort({nombre: 1}).limit(2)
+* db.productos.updateOne({descripcion: "Zapatilla Nike Air Aules"},{$set : {precio: 45000}})
+* db.clientes.deleteOne({nombre: "Nina"})
+* db.productos.find({},{nombre: 1,precio:1,_id:0}).sort({precio: 1})
+* db.clientes.find({},{nombre: 1,email:1,_id:0})
