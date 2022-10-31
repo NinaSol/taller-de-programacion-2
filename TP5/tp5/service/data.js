@@ -8,7 +8,7 @@ class ServiceData {
     }
 
     getData = async id => {
-        return id? await this.dataDAO.getData(id) : await this.dataDAO.getData()
+        return id? await this.dataDAO.getData(id) : await this.dataDAO.getAllData()
     }
 
     saveData = async data => {
