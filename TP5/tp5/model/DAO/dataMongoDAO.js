@@ -1,4 +1,4 @@
-import CnxMongoDB from '../cnxMongoDB'
+import CnxMongoDB from '../cnxMongoDB.js'
 import { ObjectId } from "mongodb"
 
 
@@ -8,6 +8,10 @@ class DataMongoDAO {
         if(!CnxMongoDB.connection) return {}
         let d = await CnxMongoDB.db.collection('data').findOne({_id: ObjectId(id)})
         return d    
+    }
+
+    getAllData = async () => {
+        return CnxMongoDB.db.collection('data').findOne({})
     }
 
     getAllData = async ()  => {

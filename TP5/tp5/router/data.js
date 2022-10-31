@@ -10,10 +10,11 @@ export class DataRouter {
 
     start() {
         this.router.get('/:id?', this.dataController.getData)
-        this.router.post('/', this.dataController.getData)
-        this.router.put('/:id', this.dataController.getData)
-        this.router.delete('/:id', this.dataController.getData)
+        this.router.post('/', this.dataController.saveData)
+        this.router.put('/:id', this.dataController.updateData)
+        this.router.delete('/:id', this.dataController.deleteData)
 
         return this.router
     }
 }
+

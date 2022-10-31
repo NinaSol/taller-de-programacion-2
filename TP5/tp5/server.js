@@ -1,7 +1,7 @@
 import express from 'express'
-import { DataRouter } from './router/data.js'
 import CnxMongoDB from './model/cnxMongoDB.js'
 import config from './config.js'
+import  {DataRouter}  from './router/data.js'
 
 const app = express()
 app.use(express.static('public'))
@@ -9,10 +9,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
-/* app.get('/ping', (req,res) => {
+/*  app.get('/ping', (req,res) => {
     res.send('pong')
-}) */
-
+}) 
+ */
 
 app.use('/api/data', new DataRouter().start())
 

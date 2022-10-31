@@ -1,5 +1,5 @@
 import DataMemDAO from './dataMemDAO.js'
-import DataMongoDAO from './dataMongoDB.js'
+import DataMongoDAO from './dataMongoDAO.js'
 
 class DataFactoryDAO {
     static get(tipo) {
